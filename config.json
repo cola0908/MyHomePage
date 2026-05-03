@@ -1,42 +1,42 @@
 {
 	"head": {
-		"title": "SimonAKing",
-		"description": "Author:SimonAKing,Category:Personal Blog",
+		"title": "cola0908",
+		"description": "cola_0908's personal homepage",
 		"favicon": "favicon.ico"
 	},
 	"intro": {
-		"title": "SimonAKing",
-		"subtitle": "Front back left right end engineer",
+		"title": "cola0908",
+		"subtitle": "Photography & programming & open source",
 		"enter": "enter",
-		"supportAuthor": true,
+		"supportAuthor": false,
 		"background": true
 	},
 	"main": {
-		"name": "SimonAKing",
-		"signature": "Code & Input & Output",
+		"name": "cola0908",
+		"signature": "",
 		"avatar": {
-			"link": "assets/avatar.jpg",
-			"height": "100",
-			"width": "100"
+			"link": "assets/NfvIvcMOIxMKUsouXbTaLbdmbcBPCWcB.png",
+			"height": "268",
+			"width": "268"
 		},
 		"ul": {
 			"first": {
-				"href": "blog/",
+				"href": "https://cola0908.top/",
 				"icon": "bokeyuan",
 				"text": "Blog"
 			},
 			"second": {
-				"href": "about/",
-				"icon": "xiaolian",
-				"text": "About"
+				"href": "https://u.cola0908.top/status/main",
+				"icon": "monitor",
+				"text": "Status"
 			},
 			"third": {
-				"href": "mailto:hi@simonaking.com",
-				"icon": "email",
-				"text": "Email"
+				"href": "https://space.bilibili.com/25900600",
+				"icon": "bilibili",
+				"text": "Bilibili"
 			},
 			"fourth": {
-				"href": "https://github.com/SimonAKing",
+				"href": "https://github.com/cola0908",
 				"icon": "github",
 				"text": "Github"
 			}
