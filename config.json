@@ -28,11 +28,13 @@
 			"second": {
 				"href": "https://u.cola0908.top/status/main",
 				"icon": "monitor",
+				"iconType": "svg",
 				"text": "Status"
 			},
 			"third": {
 				"href": "https://space.bilibili.com/25900600",
 				"icon": "bilibili",
+				"iconType": "svg",
 				"text": "Bilibili"
 			},
 			"fourth": {

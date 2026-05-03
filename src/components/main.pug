@@ -15,12 +15,18 @@
 
 				li
 					a(href=`${second.href}` aria-label=`${second.text}`)
-						i(class=`icon icon-${second.icon}`)
+						if second.iconType === "svg"
+							img.icon(src="assets/monitor.svg" alt=second.text)
+						else
+							i(class=`icon icon-${second.icon}`)
 						span(data-translate=`${second.text}`) #{second.text}
 
 				li
 					a(href=`${third.href}` aria-label=`${third.text}` target="_blank")
-						i(class=`icon icon-${third.icon}`)
+						if third.iconType === "svg"
+							img.icon(src="assets/bilibili.svg" alt=third.text)
+						else
+							i(class=`icon icon-${third.icon}`)
 						span(data-translate=`${third.text}`) #{third.text}
 
 				li
