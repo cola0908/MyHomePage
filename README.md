@@ -1,23 +1,19 @@
-# SimonAKing-HomePage
+# cola0908 / MyHomePage
 
-[中文版说明](<README.zh_CN.md>)
+本项目分支于 [SimonAKing/HomePage](https://github.com/SimonAKing/HomePage.git)，是基于该项目定制开发的cola0908的个人主页。
+
 
 ## Introduction
 
-> A modern and elegant personal homepage with fluid animation background, responsive design and smooth page transitions.
+> 一款现代优雅的个人主页，拥有流体动画背景、响应式设计与丝滑的页面切换效果。
 
-![preview](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMncyb3oyc21zc3czejU3cGk4M2tiNTdkaTM0N3FodGVpZmU5azNxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fhXFCZEogq39rOpKUi/giphy.gif)
-
-[Online browsing](http://simonaking.com)
-
-Do you want to install such a cool homepage for your website?
-
-Let's start now!
+想给自己的网站也装上这样一个超酷的个人主页吗？
+现在就开始吧！
 
 ## Install
 
 ```sh
-git clone https://github.com/SimonAKing/HomePage.git
+git clone https://github.com/cola0908/HomePage.git
 cd HomePage
 npm install
 npm run dev
@@ -25,46 +21,43 @@ npm run dev
 
 ## Features
 
-1. Highly encapsulates all the information in the page
-2. Use [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as background
-3. Use `less` as `css` preprocessor
-4. Use `pug` as `html` preprocessor
-5. Use `gulp` as a build tool and configure the build script
-6. Comfortable animation and beautiful UI
-7. Responsive, mobile support
-8. The referenced `css` and`js` files do not exceed `18.5` kb in total!
-9. Delayed response switch page event
-10. There are many features left for you to explore...
-
+1. 页面内所有信息高度封装，易于配置修改
+2. 采用 [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) 实现流体动画背景
+3. 使用 `less` 作为 `css` 预处理器
+4. 使用 `pug` 作为 `html` 预处理器
+5. 使用 `gulp` 作为构建工具并完成构建脚本配置
+6. 舒适的动画效果与精美的UI设计
+7. 响应式布局，完美适配移动端
+8. 页面引用的 `css` 与 `js` 文件总大小不超过 `18.5` kb！
+9. 页面切换事件做了延迟响应优化
+10. 更多特性等你来探索...
 
 ## Structure
 
-According to the characteristics of the project, it is divided into two categories：
-1. `intro` First screen
-2. `main` Secondary screen
+根据项目特性，整体分为两大模块：
+1. `intro` 首屏模块
+2. `main` 次屏模块
 
-The corresponding functions, styles and configurations are also based on this standard.
-
-
+项目对应的功能、样式与配置均基于此标准划分。
 
 ## Basic configuration
 
-Each key name in the config.json file`config.json` corresponds to the corresponding component name.
+`config.json` 配置文件中的每一个键名，均对应页面中相应的组件名称。
 
-such as：
+示例如下：
 
 ```json
 {
 	"head": {
-		"title": "SimonAKing",
-		"description": "Category:Personal Blog",
+		"title": "cola0908",
+		"description": "Category:Personal Homepage",
 		"favicon": "favicon.ico"
 	}
 }
-
 ```
-The above configuration information corresponds to the information in the following `layout/head.pug` component.
-```html
+
+上述配置信息，对应 `layout/head.pug` 组件中的如下内容：
+```pug
 head
 	title #{head.title}
 	meta(charset="utf-8")
@@ -72,38 +65,33 @@ head
 	link(rel="icon" href=`${head.favicon}` type="image/x-icon")
 ```
 
-
-
 ## Advanced configuration
 
 ### WebGL-Fluid-Simulation
 
-Use [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as background at home.
+首页默认使用 [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) 作为流体动画背景。
 
-If you want to turn it off, set `intro.background: false`.
+如需关闭该效果，将配置项 `intro.background` 设置为 `false` 即可。
 
 ### supportAuthor
 
-The `supportAuthor` option is turned on by default for configuration information, that is, authors are supported.
+配置项中的 `supportAuthor` 选项默认开启，即对原作者进行支持。
+开启后包含以下内容：
+1. 首页右上角将显示「章鱼猫」标识
+2. 浏览器控制台将打印原作者的站点信息
 
-All support items are as follows：
-
-1. The `octopus cat` will be displayed in the upper right corner of the home page.
-2. The console prints the author's site information
-
-If you want to turn it off, set `intro.author: false`.
-
+如需关闭该功能，将配置项 `intro.author` 设置为 `false` 即可。
 
 ### Icon replacement
-Icons in the project, all from [阿里巴巴矢量图标库](https://www.iconfont.cn)
 
-The replacement steps are as follows:
+项目中使用的图标，均来自 [阿里巴巴矢量图标库](https://www.iconfont.cn)。
 
-1. Please select your icon, add it to the project, and change the color to white.
-2. Click Font Class method
-3. Copy the contents of the generated link
-4. Replace the contents of the file `/src/css/common/icon.less`, where the contents of the `icon` selector must be preserved.
-5. Config.json the corresponding item in the `config.json`file`main.ul. * .icon`
+图标替换步骤如下：
+1. 选择需要的图标，添加至项目中，并将图标颜色修改为白色
+2. 选择 Font Class 方式生成代码
+3. 复制生成的链接内的全部内容
+4. 替换项目中 `/src/css/common/icon.less` 文件的对应内容，注意必须保留 `icon` 选择器的原有内容
+5. 在 `config.json` 配置文件中，修改 `main.ul. * .icon` 对应的图标名称
 
 ```css
 .icon {
@@ -120,19 +108,17 @@ The replacement steps are as follows:
 }
 ```
 
-
-
 ## Deployment
 
-After executing `npm run build` under the root directory, the project file will be generated to the `dist` directory.
+在项目根目录执行 `npm run build` 命令后，项目构建产物将生成至 `dist` 目录。
 
-You can then deploy the dist directory to your favorite server hosting provider.
+你可以将 dist 目录部署至任意你使用的服务器托管服务商。
 
-The following is an example of `GithubPage`:
+以下是 `GithubPage` 部署示例：
 
-1. create `userName.github.io` Repo
-
-2. ```sh
+1. 创建名为 `userName.github.io` 的仓库
+2. 执行以下命令：
+   ```sh
    cd dist
    git init
    git add -A
@@ -140,26 +126,13 @@ The following is an example of `GithubPage`:
    git remote add origin https://github.com/userName/userName.github.io.git
    git push -f origin master
    ```
+3. 在 GitHub 中配置该仓库的 Github Page 相关选项
+4. 访问 `username.github.io` 即可查看你的个人主页！
 
-3. Then set the repo's Github Page option in GitHub.
-
-4. Visit `username.github.io` to browse!
-
-
-
-If your previous `username. github.io` repo already has content, you can create another repo, such as `blog`.
-
- Then migrate the occupied items to `blog` and set the `GithubPage` option for this repo.
-
- The repo became a subdirectory of `username. github.io/blog`.
-
- In this way, your `username. github.io` repo can be left to the home page!
-
-
+如果你的 `username.github.io` 仓库已有内容，可以新建一个其他名称的仓库（例如 `blog`），将原有内容迁移至该仓库中，并为其配置 Github Page 选项，该仓库将成为 `username.github.io/blog` 子目录，这样 `username.github.io` 仓库就可以用来部署这个个人主页了。
 
 ## Sponsor
-I spent a lot of time and energy to develop this project.
 
-If this project has brought you help, welcome to sponsor, `star`.
+本项目基于 SimonAKing 开源的 HomePage 项目二次开发，原作者为项目开发投入了大量的时间与精力。如果本项目对你有帮助，欢迎前往 [原项目仓库](https://github.com/SimonAKing/HomePage) 给原作者点亮 `star` 与赞助支持。
 
-Thank you!
+感谢你的支持！
