@@ -13,7 +13,7 @@
 ## Install
 
 ```sh
-git clone https://github.com/cola0908/HomePage.git
+git clone https://github.com/cola0908/MyHomePage.git
 cd HomePage
 npm install
 npm run dev
