@@ -1,18 +1,18 @@
 {
 	"head": {
-		"title": "cola0908",
+		"title": "cola_0908 | 个人首页",
 		"description": "cola_0908's personal homepage",
 		"favicon": "assets/NfvIvcMOIxMKUsouXbTaLbdmbcBPCWcB.png"
 	},
 	"intro": {
-		"title": "cola0908",
+		"title": "cola_0908",
 		"subtitle": "Photography & programming & open source",
 		"enter": "enter",
 		"supportAuthor": false,
 		"background": true
 	},
 	"main": {
-		"name": "cola0908",
+		"name": "cola_0908",
 		"signature": "",
 		"avatar": {
 			"link": "assets/NfvIvcMOIxMKUsouXbTaLbdmbcBPCWcB.png",
